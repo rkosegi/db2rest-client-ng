@@ -1,0 +1,10 @@
+/node_modules
+dist
+.angular
+.idea
+.vscode
+/.private
+/.cache
+package-lock.json
+projects/db2rest-client/src/lib/spec
+/openapitools.json
