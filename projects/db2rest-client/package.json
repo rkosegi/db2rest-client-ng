@@ -1,0 +1,16 @@
+{
+  "name": "@rkosegi/db2rest-client",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^18.2.0",
+    "@angular/core": "^18.2.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rkosegi/db2rest-client-ng.git"
+  },
+  "sideEffects": false
+}
