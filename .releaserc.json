@@ -1,7 +1,7 @@
 {
   "branches": ["main"],
   "repositoryUrl": "https://github.com/rkosegi/db2rest-client-ng",
-  "pkgRoot": "dist/db2rest-client",
+  "pkgRoot": "dist/db2rest-client-ng",
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
@@ -9,7 +9,7 @@
       "@semantic-release/npm",
       {
         "npmPublish": true,
-        "pkgRoot": "dist/db2rest-client",
+        "pkgRoot": "dist/db2rest-client-ng",
         "tarballDir": "dist",
         "registry": "https://npm.pkg.github.com/"
       }

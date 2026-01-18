@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../dist/db2rest-client",
+  "dest": "../../dist/db2rest-client-ng",
   "lib": {
     "entryFile": "src/public-api.ts"
   }

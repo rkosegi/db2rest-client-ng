@@ -31,7 +31,7 @@ updates:
       include: scope
 
   - package-ecosystem: npm
-    directory: /projects/db2rest-client
+    directory: /projects/db2rest-client-ng
     schedule:
       interval: weekly
     open-pull-requests-limit: 5

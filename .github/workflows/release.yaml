@@ -23,6 +23,9 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
     steps:
       - uses: actions/checkout@v4
         with:
@@ -34,6 +37,11 @@ jobs:
           scope: '@rkosegi'
           registry-url: https://npm.pkg.github.com/
 
+      - name: Debug npm auth
+        run: |
+          npm config list
+          npm whoami --registry=https://npm.pkg.github.com || true
+
       - name: Download OpenAPI spec from upstream project
         run: make download-spec
 
@@ -44,7 +52,7 @@ jobs:
         run: |
           npm i
           npm ci
-          npm run build db2rest-client
+          npm run build
 
       - name: Release to GitHub Packages
         env:

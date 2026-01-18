@@ -15,7 +15,7 @@ limitations under the License.
 */
 
 import { Injectable } from '@angular/core';
-import { OrderBy, QueryBase} from './query'
+import { OrderBy, FilterExpression} from './query'
 @Injectable({
   providedIn: 'root'
 })
@@ -23,10 +23,10 @@ export class Db2restClientService {
 
   constructor() { }
 
-  searchQuery(orders: OrderBy[], pageSize: number, pageOffset: number, query :QueryBase|null) : string {
+  searchQuery(orders: OrderBy[], pageSize: number, pageOffset: number, query :FilterExpression|null) : string {
     let parts: string[]  = [];
     parts = parts.concat(...orders.map((o, i, arr) => {
-      return `order[]=${o.toQueryString()}`
+      return `order[]=${o.toJsonString()}`
     }));
     if (pageSize > 0) {
       parts.push(`page-size=${pageSize}`)
@@ -35,9 +35,8 @@ export class Db2restClientService {
       parts.push(`page-offset=${pageOffset}`);
     }
     if (query != null) {
-      parts.push(`filter=${query.toQueryString()}`);
+      parts.push(`filter=${query.toJsonString()}`);
     }
     return parts.join("&");
   }
-
 }

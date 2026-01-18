@@ -3,23 +3,23 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "db2rest-client": {
+    "db2rest-client-ng": {
       "projectType": "library",
-      "root": "projects/db2rest-client",
-      "sourceRoot": "projects/db2rest-client/src",
+      "root": "projects/db2rest-client-ng",
+      "sourceRoot": "projects/db2rest-client-ng/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular/build:ng-packagr",
           "options": {
-            "project": "projects/db2rest-client/ng-package.json"
+            "project": "projects/db2rest-client-ng/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/db2rest-client/tsconfig.lib.prod.json"
+              "tsConfig": "projects/db2rest-client-ng/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/db2rest-client/tsconfig.lib.json"
+              "tsConfig": "projects/db2rest-client-ng/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -27,7 +27,7 @@
         "test": {
           "builder": "@angular/build:karma",
           "options": {
-            "tsConfig": "projects/db2rest-client/tsconfig.spec.json",
+            "tsConfig": "projects/db2rest-client-ng/tsconfig.spec.json",
             "polyfills": [
               "zone.js",
               "zone.js/testing"

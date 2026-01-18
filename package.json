@@ -1,5 +1,5 @@
 {
-  "name": "db2rest-client",
+  "name": "db2rest-client-ng",
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",

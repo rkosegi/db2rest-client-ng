@@ -2,8 +2,8 @@
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {
-      "db2rest-client": [
-        "./dist/db2rest-client"
+      "db2rest-client-ng": [
+        "./dist/db2rest-client-ng"
       ]
     },
     "outDir": "./dist/out-tsc",

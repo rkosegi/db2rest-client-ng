@@ -17,6 +17,7 @@ limitations under the License.
 import { TestBed } from '@angular/core/testing';
 
 import { Db2restClientService } from './db2rest-client.service';
+import {SimpleExpression} from "./query";
 
 describe('Db2restClientService', () => {
   let service: Db2restClientService;
@@ -28,5 +29,11 @@ describe('Db2restClientService', () => {
 
   it('should be created', () => {
     expect(service).toBeTruthy();
+  });
+
+  it('should serialize search query', () => {
+    expect(service.searchQuery([], 20, 140,
+      new SimpleExpression("state", "=", "done"))).
+    toEqual('page-size=20&page-offset=140&filter={"simple":{"name":"state","op":"=","val":"done"}}' );
   });
 });

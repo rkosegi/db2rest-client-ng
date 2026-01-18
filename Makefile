@@ -15,18 +15,18 @@
 .DEFAULT_GOAL := build
 
 gen:
-	npx @openapitools/openapi-generator-cli generate \
+	npx -y @openapitools/openapi-generator-cli generate \
 		--global-property models,apis,supportingFiles		\
 		--generator-name typescript-angular				\
 		--config apigen.config.json		\
 		--input-spec-root-directory .cache/specs 	\
-		--output projects/db2rest-client/src/lib/spec
-	cd projects/db2rest-client/src/lib/spec && rm -fr git_push.sh README.md .gitignore .openapi-generator-ignore .openapi-generator
+		--output projects/db2rest-client-ng/src/lib/spec
+	cd projects/db2rest-client-ng/src/lib/spec && rm -fr git_push.sh README.md .gitignore .openapi-generator-ignore .openapi-generator
 
 build:
 	npm ci
 	ng build
-	cd dist/db2rest-client
+	cd dist/db2rest-client-ng
 	npm pack --pack-destination dist
 
 prepare:

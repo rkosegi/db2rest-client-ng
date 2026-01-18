@@ -44,6 +44,6 @@ jobs:
         run: |
           npm i
           npm ci
-          npm run build db2rest-client
-          cd dist/db2rest-client
+          npm run build db2rest-client-ng
+          cd dist/db2rest-client-ng
           npm pack

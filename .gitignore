@@ -6,5 +6,5 @@ dist
 /.private
 /.cache
 package-lock.json
-projects/db2rest-client/src/lib/spec
+projects/db2rest-client-ng/src/lib/spec
 /openapitools.json
