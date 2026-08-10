@@ -15,7 +15,6 @@ limitations under the License.
 */
 
 import { TestBed } from '@angular/core/testing';
-
 import { Db2restClientService } from './db2rest-client.service';
 import {SimpleExpression} from "./query";
 

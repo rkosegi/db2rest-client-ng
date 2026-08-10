@@ -43,7 +43,7 @@ jobs:
       - name: Build
         run: |
           npm i
-          npm ci
+          npm ci --no-fund --no-audit --ignore-scripts
           npm run build db2rest-client-ng
           cd dist/db2rest-client-ng
           npm pack
