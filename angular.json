@@ -6,20 +6,21 @@
     "db2rest-client-ng": {
       "projectType": "library",
       "root": "projects/db2rest-client-ng",
-      "sourceRoot": "projects/db2rest-client-ng/src",
+      "sourceRoot": "projects/db2rest-client-ng",
       "prefix": "lib",
       "architect": {
         "build": {
-          "builder": "@angular/build:ng-packagr",
+          "builder": "@angular/build:library",
           "options": {
-            "project": "projects/db2rest-client-ng/ng-package.json"
+            "tsConfig": "projects/db2rest-client-ng/tsconfig.lib.json",
+            "outputPath": "dist/db2rest-client-ng"
           },
           "configurations": {
             "production": {
               "tsConfig": "projects/db2rest-client-ng/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/db2rest-client-ng/tsconfig.lib.json"
+              "compilationMode": "full"
             }
           },
           "defaultConfiguration": "production"
